@@ -1,0 +1,31 @@
+<script setup>
+defineProps({
+  currentStep: {
+    type: Number,
+    required: true
+  }
+})
+
+const steps = [
+  {id: 1, title: "YOUR INFO"},
+  {id: 2, title: "SELECT PLAN"},
+  {id: 3, title: "ADD-ONS"},
+  {id: 4, title: "SUMMARY"}
+]
+</script>
+<template>
+<div class="h-full bg-no-repeat object-cover rounded-xl py-10 px-8 bg-[url('../assets/images/bg-sidebar-desktop.svg')]">
+  <div v-for="step in steps"
+       :key="step.id"
+       class="flex items-center gap-4 mb-8 last:mb-0">
+    <div
+      :class="`${step.id === currentStep ? 'bg-[#BEE2FD] !border-[#BEE2FD] !text-[#022959]' : ''} w-8 h-8 rounded-full border border-solid border-white flex items-center justify-center text-white font-ubuntu-bold`">
+      {{ step.id }}
+    </div>
+    <div class="flex flex-col justify-between">
+      <span class="text-[#ABBCFF] text-xs">{{ 'STEP ' + step.id }}</span>
+      <p class="text-sm font-ubuntu-bold text-white tracking-[1px]">{{ step.title }}</p>
+    </div>
+  </div>
+</div>
+</template>
