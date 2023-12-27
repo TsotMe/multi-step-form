@@ -19,7 +19,9 @@ const steps = [
        :key="step.id"
        class="flex items-center gap-4 mb-8 last:mb-0">
     <div
-      :class="`${step.id === currentStep ? 'bg-[#BEE2FD] !border-[#BEE2FD] !text-[#022959]' : ''} w-8 h-8 rounded-full border border-solid border-white flex items-center justify-center text-white font-ubuntu-bold`">
+      :class="`${step.id === currentStep || step.id === 4 && currentStep === 5 ?
+      'bg-[#BEE2FD] !border-[#BEE2FD] !text-[#022959]' :
+      ''} w-8 h-8 rounded-full border border-solid border-white flex items-center justify-center text-white font-ubuntu-bold`">
       {{ step.id }}
     </div>
     <div class="flex flex-col justify-between">
