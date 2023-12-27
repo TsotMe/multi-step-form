@@ -5,7 +5,13 @@ export default {
     "./src/**/*.{vue,ts,jsx,tsx}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'ubuntu-bold': "'ubuntu-bold', 'sans-serif'",
+        'ubuntu-medium': "'ubuntu-medium', 'sans-serif'",
+        'ubuntu-regular': "'ubuntu-regular', 'sans-serif'"
+      }
+    },
   },
   plugins: [],
 }
