@@ -1,6 +1,7 @@
 <script setup>
 import {useFirstStep} from "@/stores/FirstStep.js";
 import {computed} from "vue";
+import FirstStep from "@/components/steps/FirstStep.vue";
 
 const props = defineProps({
   title: {
@@ -26,8 +27,8 @@ const nextButtonName = computed(() => {
 })
 
 const stepComponent = computed(() => {
-  return props.currentStep === 1 ? 'FirstStep' : props.currentStep === 2 ? 'SecondStep' :
-    props.currentStep === 3 ? 'ThirdStep' : 'FourthStep'
+  return props.currentStep === 1 ? FirstStep : props.currentStep === 2 ? SecondStep :
+    props.currentStep === 3 ? ThirdStep : FourthStep
 })
 
 const handlePrevButtonCLick = () => {
@@ -39,7 +40,7 @@ const handleNextButtonCLick = (value) => {
 
   if (value === 2) {
     if (value < 6 && name && email && phone_number) {
-      return this.$emit('update:currentStep', value)
+      return emit('update:currentStep', value)
     }
 
     const errorData = {
