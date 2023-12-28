@@ -24,21 +24,21 @@ watch(() => isYearly.value, (newVal) => {
       :planImage="iconArcade"
       planTitle="Arcade"
       :planInitialPrice="9"
-      :class="{'border-[#483EFF]': selectedPlan === 1}"
+      :class="{'!border-[#483EFF]': selectedPlan === 1}"
       @setSelectedPlan="selectedPlan = 1"
     />
     <PlanComponent
       :planImage="iconAdvanced"
       planTitle="Advanced"
       :planInitialPrice="12"
-      :class="{'border-[#483EFF]': selectedPlan === 2}"
+      :class="{'!border-[#483EFF]': selectedPlan === 2}"
       @setSelectedPlan="selectedPlan = 2"
     />
     <PlanComponent
       :planImage="iconPro"
       planTitle="Pro"
       :planInitialPrice="15"
-      :class="{'border-[#483EFF]': selectedPlan === 3}"
+      :class="{'!border-[#483EFF]': selectedPlan === 3}"
       @setSelectedPlan="selectedPlan = 3"
     />
   </div>

@@ -33,7 +33,7 @@ const planPrice = computed(() => {
 
 <template>
 <div
-  class="rounded-lg pt-5 pb-4 px-4 flex flex-col gap-[39px] transition-all duration-200 border border-solid border-[#D6D9E6] hover:border-[#483EFF]"
+  class="rounded-lg pt-5 pb-4 px-4 flex flex-col gap-[39px] transition-all duration-200 border border-solid border-[#D6D9E6] hover:border-[#483EFF] cursor-pointer"
   @click="emit('setSelectedPlan')">
   <img class="w-10 h-10"
        :src="planImage"
