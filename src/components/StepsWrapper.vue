@@ -2,6 +2,7 @@
 import {useFirstStep} from "@/stores/FirstStep.js";
 import {computed} from "vue";
 import FirstStep from "@/components/steps/FirstStep.vue";
+import SecondStep from "@/components/steps/SecondStep.vue";
 
 const props = defineProps({
   title: {
