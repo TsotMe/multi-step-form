@@ -2,6 +2,7 @@
 import {useFirstStep} from "@/stores/FirstStep.js";
 import {computed} from "vue";
 import FirstStep from "@/components/steps/FirstStep.vue";
+import SecondStep from "@/components/steps/SecondStep.vue";
 
 const props = defineProps({
   title: {
@@ -49,6 +50,10 @@ const handleNextButtonCLick = (value) => {
       phone_number: !phone_number ? "This field is required" : '',
     }
     return firstStepStore.updateError(errorData)
+  }
+
+  if (value === 3) {
+    return emit('update:currentStep', value)
   }
 }
 </script>
