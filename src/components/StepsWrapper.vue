@@ -26,8 +26,8 @@ const nextButtonName = computed(() => {
 })
 
 const stepComponent = computed(() => {
-  return props.currentStep === 1 ? 'StepOne' : props.currentStep === 2 ? 'StepTwo' :
-    props.currentStep === 3 ? 'StepThree' : 'StepFour'
+  return props.currentStep === 1 ? 'FirstStep' : props.currentStep === 2 ? 'SecondStep' :
+    props.currentStep === 3 ? 'ThirdStep' : 'FourthStep'
 })
 
 const handlePrevButtonCLick = () => {
