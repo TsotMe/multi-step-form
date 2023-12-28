@@ -51,6 +51,10 @@ const handleNextButtonCLick = (value) => {
     }
     return firstStepStore.updateError(errorData)
   }
+
+  if (value === 3) {
+    return emit('update:currentStep', value)
+  }
 }
 </script>
 
