@@ -4,6 +4,7 @@ import {computed} from "vue";
 import FirstStep from "@/components/steps/FirstStep.vue";
 import SecondStep from "@/components/steps/SecondStep.vue";
 import ThirdStep from "@/components/steps/ThirdStep.vue";
+import FourthStep from "@/components/steps/FourthStep.vue";
 
 const props = defineProps({
   title: {
@@ -60,6 +61,10 @@ const handleNextButtonCLick = (value) => {
   if (value === 4) {
     return emit('update:currentStep', value)
   }
+
+  if (value === 5) {
+    return emit('update:currentStep', value)
+  }
 }
 </script>
 
@@ -75,8 +80,8 @@ const handleNextButtonCLick = (value) => {
     <h2 class="font-ubuntu-bold text-[32px] text-[#00194F] mb-2.5">{{ title }}</h2>
     <p class="text-[#9699AA]">{{ description }}</p>
   </div>
-  <keep-alive>
-    <Component :is="stepComponent"/>
+  <keep-alive v-if="currentStep < 5">
+    <Component :is="stepComponent" @goToSecondStep="emit('update:currentStep', 2)"/>
   </keep-alive>
   <div v-if="currentStep !== 5"
        :class="`${currentStep === 1 ? '!justify-end' : ''} flex items-center justify-between`">
