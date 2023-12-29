@@ -23,7 +23,8 @@ const stepData = computed(() => {
 
 <template>
 <div class="w-full h-dvh bg-[#EFF5FF] flex items-center justify-center">
-  <main class="bg-white p-4 w-[940px] h-[600px] rounded-[14px] grid grid-cols-[274px_1fr]">
+  <main
+    class="bg-white p-4 w-[940px] h-[600px] rounded-[15px] grid grid-cols-[274px_1fr] shadow-[0_25px_40px_-20px_rgba(0,0,0,0.10)]">
     <Sidebar :currentStep="currentStep"/>
     <div class="flex items-center justify-center">
       <StepsWrapper :title="stepData.title"
