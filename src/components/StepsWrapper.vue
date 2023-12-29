@@ -3,6 +3,7 @@ import {useFirstStep} from "@/stores/FirstStep.js";
 import {computed} from "vue";
 import FirstStep from "@/components/steps/FirstStep.vue";
 import SecondStep from "@/components/steps/SecondStep.vue";
+import ThirdStep from "@/components/steps/ThirdStep.vue";
 
 const props = defineProps({
   title: {
@@ -53,6 +54,10 @@ const handleNextButtonCLick = (value) => {
   }
 
   if (value === 3) {
+    return emit('update:currentStep', value)
+  }
+
+  if (value === 4) {
     return emit('update:currentStep', value)
   }
 }
