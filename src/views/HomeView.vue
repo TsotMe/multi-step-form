@@ -6,7 +6,7 @@ import ActionBar from "@/components/ActionBar.vue";
 import {useFirstStep} from "@/stores/FirstStep.js";
 
 const firstStepStore = useFirstStep()
-const currentStep = ref(2)
+const currentStep = ref(1)
 
 const stepsListing = [
   {title: "Personal info", description: "Please provide your name, email address, and phone number."},

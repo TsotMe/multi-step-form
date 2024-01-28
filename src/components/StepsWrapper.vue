@@ -79,13 +79,13 @@ const handleNextButtonCLick = (value) => {
     :class="`${currentStep === 5 ?
     '[&>img]:block [&>img]:w-20 [&>img]:h-20 [&>img]:mb-8 [&>h2]:mb-[14px] [&>p]:text-center [&>p]:leading-[25px] h-full flex flex-col items-center justify-center mb-6'
      : ''}`">
-    <img class="hidden"
+    <img class="hidden tablet:!w-[56px] tablet:!h-[56px] tablet:mt-[47px]"
          src="../assets/images/icon-thank-you.svg"
          alt="">
     <h2
       class="font-ubuntu-bold text-[32px] text-[#00194F] mb-2.5 tablet:text-[24px] tablet:leading-[28px] tablet:mb-[9px]">{{ title
       }}</h2>
-    <p class="text-[#9699AA] tablet:h-[50px]">{{ description }}</p>
+    <p :class="`${currentStep === 5 ? 'mb-[23px]' : ''} text-[#9699AA]`">{{ description }}</p>
   </div>
   <keep-alive v-if="currentStep < 5">
     <Component :is="stepComponent" @goToSecondStep="emit('update:currentStep', 2)"/>
