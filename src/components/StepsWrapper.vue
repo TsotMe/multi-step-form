@@ -5,6 +5,7 @@ import FirstStep from "@/components/steps/FirstStep.vue";
 import SecondStep from "@/components/steps/SecondStep.vue";
 import ThirdStep from "@/components/steps/ThirdStep.vue";
 import FourthStep from "@/components/steps/FourthStep.vue";
+import ActionBar from "@/components/ActionBar.vue";
 
 const props = defineProps({
   title: {
@@ -69,7 +70,9 @@ const handleNextButtonCLick = (value) => {
 </script>
 
 <template>
-<div class="flex flex-col justify-between w-[450px] h-full pt-10 pb-4">
+<div
+  class="flex flex-col justify-between w-[450px] h-full pt-10 pb-4 tablet:bg-white tablet:mx-auto tablet:my-0
+  tablet:py-8 tablet:px-6 tablet:h-fit tablet:mt-[-75px] tablet:w-[343px] tablet:rounded-[10px]">
   <div
     :class="`${currentStep === 5 ?
     '[&>img]:block [&>img]:w-20 [&>img]:h-20 [&>img]:mb-8 [&>h2]:mb-[14px] [&>p]:text-center [&>p]:leading-[25px] h-full flex flex-col items-center justify-center mb-6'
@@ -83,18 +86,7 @@ const handleNextButtonCLick = (value) => {
   <keep-alive v-if="currentStep < 5">
     <Component :is="stepComponent" @goToSecondStep="emit('update:currentStep', 2)"/>
   </keep-alive>
-  <div v-if="currentStep !== 5"
-       :class="`${currentStep === 1 ? '!justify-end' : ''} flex items-center justify-between`">
-    <button class="text-[#9699AA] font-ubuntu-medium"
-            v-show="currentStep !== 1"
-            @click="handlePrevButtonCLick">Go Back
-    </button>
-    <button
-      :class="`${currentStep === 4 ? '!bg-[#483EFF]' : 'bg-[#022959]'} text-white py-3 px-6 rounded-lg font-ubuntu-medium`"
-      @click="handleNextButtonCLick(currentStep + 1)">
-      {{ nextButtonName }}
-    </button>
-  </div>
+  <ActionBar v-if="currentStep !== 5" class="tablet:hidden" :currentStep="currentStep" @prev="handlePrevButtonCLick"
+             @next="handleNextButtonCLick"/>
 </div>
 </template>
-
