@@ -12,6 +12,9 @@ export default {
         'ubuntu-regular': "'ubuntu-regular', 'sans-serif'"
       }
     },
+    screens: {
+      'tablet': {'max': '1023px'},
+    },
   },
   plugins: [],
 }
