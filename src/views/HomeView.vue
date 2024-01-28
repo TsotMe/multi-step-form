@@ -6,7 +6,7 @@ import ActionBar from "@/components/ActionBar.vue";
 import {useFirstStep} from "@/stores/FirstStep.js";
 
 const firstStepStore = useFirstStep()
-const currentStep = ref(1)
+const currentStep = ref(2)
 
 const stepsListing = [
   {title: "Personal info", description: "Please provide your name, email address, and phone number."},
@@ -52,17 +52,17 @@ const handleNextButtonCLick = (value) => {
 </script>
 
 <template>
-<div class="w-full h-dvh bg-[#EFF5FF] flex items-center justify-center">
+<div class="w-full min-h-dvh bg-[#EFF5FF] flex items-center justify-center">
   <main
     class="bg-white p-4 w-[940px] h-[600px] rounded-[15px] grid grid-cols-[274px_1fr] shadow-[0_25px_40px_-20px_rgba(0,0,0,0.10)]
-    tablet:relative tablet:w-full tablet:h-full tablet:bg-transparent tablet:grid-cols-1 tablet:p-0 tablet:grid-rows-[172px_1fr]">
+    tablet:relative tablet:w-full tablet:h-full tablet:bg-transparent tablet:grid-cols-1 tablet:p-0 tablet:grid-rows-[172px_1fr_72px]">
     <Sidebar :currentStep="currentStep"/>
-    <div class="flex items-center justify-center tablet:block">
+    <div class="flex items-center justify-center tablet:block tablet:mt-[-75px] tablet:mb-6">
       <StepsWrapper :title="stepData.title"
                     :description="stepData.description"
                     v-model:currentStep="currentStep"/>
     </div>
-    <div v-if="currentStep !== 5" class="hidden bg-white p-4 w-full fixed bottom-0 tablet:block">
+    <div v-if="currentStep !== 5" class="hidden bg-white p-4 w-full tablet:block">
       <ActionBar class="max-w-[343px] my-0 mx-auto" :currentStep="currentStep"
                  @prev="handlePrevButtonCLick"
                  @next="handleNextButtonCLick"/>

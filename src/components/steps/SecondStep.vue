@@ -16,8 +16,10 @@ watch(() => isYearly.value, (newVal) => {
 </script>
 
 <template>
-<div class="h-full mt-[35px]">
-  <div class="grid items-center justify-between grid-cols-[1fr_1fr_1fr] gap-[18px] mb-8">
+<div class="h-full mt-[35px] tablet:mt-[22px]">
+  <div
+    class="grid items-center justify-between grid-cols-[1fr_1fr_1fr] gap-[18px] mb-8 tablet:grid-rows-3 tablet:grid-cols-1
+    tablet:gap4 tablet:mb-6">
     <PlanComponent
       :planImage="iconArcade"
       planTitle="Arcade"

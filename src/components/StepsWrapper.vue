@@ -74,7 +74,7 @@ const handleNextButtonCLick = (value) => {
 <template>
 <div
   class="flex flex-col justify-between w-[450px] h-full pt-10 pb-4 tablet:bg-white tablet:mx-auto tablet:my-0
-  tablet:py-8 tablet:px-6 tablet:h-fit tablet:mt-[-75px] tablet:w-[343px] tablet:rounded-[10px]">
+  tablet:py-8 tablet:px-6 tablet:h-fit tablet:w-[343px] tablet:rounded-[10px]">
   <div
     :class="`${currentStep === 5 ?
     '[&>img]:block [&>img]:w-20 [&>img]:h-20 [&>img]:mb-8 [&>h2]:mb-[14px] [&>p]:text-center [&>p]:leading-[25px] h-full flex flex-col items-center justify-center mb-6'
