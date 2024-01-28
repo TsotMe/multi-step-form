@@ -80,8 +80,10 @@ const handleNextButtonCLick = (value) => {
     <img class="hidden"
          src="../assets/images/icon-thank-you.svg"
          alt="">
-    <h2 class="font-ubuntu-bold text-[32px] text-[#00194F] mb-2.5 tablet:text-[24px] tablet:">{{ title }}</h2>
-    <p class="text-[#9699AA]">{{ description }}</p>
+    <h2
+      class="font-ubuntu-bold text-[32px] text-[#00194F] mb-2.5 tablet:text-[24px] tablet:leading-[28px] tablet:mb-[9px]">{{ title
+      }}</h2>
+    <p class="text-[#9699AA] tablet:h-[50px]">{{ description }}</p>
   </div>
   <keep-alive v-if="currentStep < 5">
     <Component :is="stepComponent" @goToSecondStep="emit('update:currentStep', 2)"/>

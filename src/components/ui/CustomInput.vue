@@ -39,8 +39,8 @@ const value = computed({
 <template>
 <div class="w-full h-fit">
   <div class="flex items-center justify-between mb-2 tablet:mb-[3px]">
-    <label class="text-[#022959] tablet:text-xs">{{ labelText }}</label>
-    <span class="font-ubuntu-bold text-[#EE374A] tablet:text-xs">{{ errorText }}</span>
+    <label class="text-[#022959] tablet:text-xs tablet:leading-[14px]">{{ labelText }}</label>
+    <span class="font-ubuntu-bold text-[#EE374A] tablet:text-xs tablet:leading-[14px]">{{ errorText }}</span>
   </div>
   <input
     class="w-full h-12 rounded-lg border border-solid border-[#D6D9E6] text-[#022959] pl-2.5 font-ubuntu-medium text-base

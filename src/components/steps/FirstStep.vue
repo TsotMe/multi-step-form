@@ -6,7 +6,7 @@ const firstStepStore = useFirstStep()
 </script>
 
 <template>
-<div class="h-full flex flex-col gap-6 mt-[35px] tablet:mt-[22px]">
+<div class="h-full flex flex-col gap-6 mt-[35px] tablet:mt-[22px] tablet:gap-4">
   <CustomInput
     type="text"
     labelText="Name"
