@@ -32,6 +32,8 @@ const handleNextButtonCLick = (value) => {
 
   if (value === 2) {
     if (value < 6 && name && email && phone_number) {
+      firstStepStore.updateError({name: '', email: '', phone_number: ''})
+
       return currentStep.value = value
     }
 
