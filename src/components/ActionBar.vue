@@ -18,12 +18,13 @@ const nextButtonName = computed(() => {
 <template>
 <div :class="`${currentStep === 1 ? '!justify-end' : ''} flex items-center justify-between`">
   <button
-    class="text-[#9699AA] font-ubuntu-medium" v-show="currentStep
+    class="text-[#9699AA] font-ubuntu-medium tablet:text-sm tablet:leading-4" v-show="currentStep
     !== 1" @click="emit('prev')">
     Go Back
   </button>
   <button
-    :class="`${currentStep === 4 ? '!bg-[#483EFF]' : 'bg-[#022959]'} text-white py-3 px-6 rounded-lg font-ubuntu-medium`"
+    :class="`${currentStep === 4 ? '!bg-[#483EFF]' : 'bg-[#022959]'} text-white py-3 px-6 rounded-lg font-ubuntu-medium
+    tablet:text-sm tablet:rounded tablet:px-4 tablet:leading-4`"
     @click="emit('next', currentStep + 1)">
     {{ nextButtonName }}
   </button>
