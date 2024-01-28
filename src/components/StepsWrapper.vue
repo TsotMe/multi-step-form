@@ -80,7 +80,7 @@ const handleNextButtonCLick = (value) => {
     <img class="hidden"
          src="../assets/images/icon-thank-you.svg"
          alt="">
-    <h2 class="font-ubuntu-bold text-[32px] text-[#00194F] mb-2.5">{{ title }}</h2>
+    <h2 class="font-ubuntu-bold text-[32px] text-[#00194F] mb-2.5 tablet:text-[24px] tablet:">{{ title }}</h2>
     <p class="text-[#9699AA]">{{ description }}</p>
   </div>
   <keep-alive v-if="currentStep < 5">
