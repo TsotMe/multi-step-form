@@ -1,29 +1,56 @@
-# multi-step-form
+# Multi-Step Form
 
-This template should help get you started developing with Vue 3 in Vite.
+A responsive multi-step form built using Vue.js, Pinia, TailwindCSS, Composition API, and Vue Router. The form allows users to move through a series of steps while saving their progress and validating inputs, providing a smooth user experience.
 
-## Recommended IDE Setup
+## Features
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+- **Multi-step Navigation**: Users can navigate through form steps and track their progress.
+- **State Management with Pinia**: Form data is managed efficiently across steps.
+- **TailwindCSS for Styling**: A clean, responsive UI that looks great on all devices.
+- **Composition API**: Ensures organized, scalable, and maintainable code.
+- **Vue Router**: Dynamic step navigation using Vue Router.
+- **Customizable**: Easily adaptable for forms like registrations, subscriptions, or surveys.
 
 ## Project Setup
 
-```sh
-npm install
-```
+### Prerequisites
 
-### Compile and Hot-Reload for Development
+Ensure that you have [Node.js](https://nodejs.org/en/) installed.
 
-```sh
-npm run dev
-```
+To run this project locally, follow these steps:
 
-### Compile and Minify for Production
+1. Clone the repository:
 
-```sh
-npm run build
-```
+   ```bash
+   git clone https://github.com/yourusername/multi-step-form.git
+   cd multi-step-form
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the application:
+
+   ```bash
+   npm run dev
+   ```
+
+   The app will be available at `http://localhost:3000`.
+
+## Usage
+
+- **Step 1:** Personal Info - Collects basic user details like name, email, and phone number.
+- **Step 2:** Select Plan - Users choose from various subscription plans, with options for monthly or yearly billing.
+- **Step 3:** Add-ons - Additional features can be selected to enhance the subscription plan.
+- **Step 4:** Summary - Users review their information and selections before submitting the form.
+
+## Contributing
+
+Feel free to fork the repository, submit a pull request, or open an issue. Contributions are always appreciated!
+
+## License
+
+This project is licensed under the MIT License.
